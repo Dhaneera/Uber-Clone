@@ -6,7 +6,9 @@ interface Location {
   lat: number;
   lng: number;
 }
-
+interface TravelTimeInfrormation{
+    
+}
 interface Destination {
   location: Location;
   description: string;
@@ -18,7 +20,7 @@ interface Origin {
 interface NavState {
   origin: Origin | null;
   destination: Destination | null;
-  travelTimeInfrormation: any | null;
+  travelTimeInfrormation: TravelTimeInfrormation | null;
 }
 
 const initialState: NavState = {
@@ -29,7 +31,7 @@ const initialState: NavState = {
 
 export const NavSlice = createSlice({
   name: "nav",
-  
+
   initialState,
   reducers: {
     setOrgin: (state, action: PayloadAction<Origin>) => {
