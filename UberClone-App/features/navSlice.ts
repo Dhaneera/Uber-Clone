@@ -29,6 +29,7 @@ const initialState: NavState = {
 
 export const NavSlice = createSlice({
   name: "nav",
+  
   initialState,
   reducers: {
     setOrgin: (state, action: PayloadAction<Origin>) => {
